@@ -1,13 +1,17 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Czysta Strata Czasu, mon..."
+    return render_template('home.jinja')
+
+@app.route('/about')
+def about():
+    return render_template('about.jinja')
   
 @app.route('/warum')
-def about():
+def warum():
     return "Warum? Darum! Warum nicht?"
 
 if __name__ == '__main__':
