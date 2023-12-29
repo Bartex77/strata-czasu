@@ -5,10 +5,11 @@
       {% block title %}
       {% endblock %}
     </title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+{#    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />#}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/global.css') }}">
   </head>
   <body>
-    <header>
+    <header class="container">
       {% block header %}
       {% endblock %}
     </header>
